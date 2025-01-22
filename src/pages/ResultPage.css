@@ -146,14 +146,20 @@ h1 {
 
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
+
+
 .cards-container {
   display: flex; /* Enable flexbox for horizontal alignment */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: nowrap; /* Prevent wrapping into columns */
   justify-content: center; /* Center the cards horizontally */
   gap: 20px; /* Add spacing between cards */
+  overflow-x: auto; /* Enable horizontal scrolling if cards overflow */
   margin-top: 20px; /* Add space above */
   margin-bottom: 40px; /* Add space below to prevent overlap with footer */
+  padding: 0 10px; /* Add some padding for responsiveness */
+  box-sizing: border-box; /* Include padding in calculations */
 }
+
 
 .card {
   flex: 1 1 calc(33.33% - 40px); /* Each card takes up 1/3 of the row with spacing */
@@ -185,8 +191,10 @@ h1 {
   font-family: 'Forum';
 }
 
-
-
+footer {
+  position: relative; /* Ensure it stacks properly */
+  z-index: 2; /* Place above background layers */
+}
 
 /* Responsive Adjustments */
 @media (max-width: 576px) {
@@ -200,5 +208,17 @@ h1 {
 
   .btn-warning {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    overflow-x: scroll; /* Allow horizontal scroll on smaller devices */
+    gap: 10px; /* Reduce spacing for smaller screens */
+  }
+
+  .card {
+    flex: 0 0 auto; /* Ensure each card maintains its size */
+    max-width: 250px; /* Limit the size for smaller screens */
   }
 }
