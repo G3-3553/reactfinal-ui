@@ -156,7 +156,7 @@ h1 {
   overflow-x: auto; /* Enable horizontal scrolling if cards overflow */
   margin-top: 20px; /* Add space above */
   margin-bottom: 40px; /* Add space below to prevent overlap with footer */
-  padding: 0 10px; /* Add some padding for responsiveness */
+  padding: 0 40px; /* Add some padding for responsiveness */
   box-sizing: border-box; /* Include padding in calculations */
 }
 
@@ -191,9 +191,6 @@ h1 {
   font-family: 'Forum';
 }
 
-footer {
-  position: relative; /* Ensure it stacks properly */
-}
 
 /* Responsive Adjustments */
 @media (max-width: 576px) {
