@@ -41,7 +41,7 @@ const FormPage = () => {
         formData.append(key, inputData[key]);
       });
   
-      const response = await axios.post('http://127.0.0.1:5000/predict', formData, {
+      const response = await axios.post('https://reactfinal-backend.onrender.com/predict', formData, {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     });
   
