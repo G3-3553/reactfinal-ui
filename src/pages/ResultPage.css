@@ -193,7 +193,6 @@ h1 {
 
 footer {
   position: relative; /* Ensure it stacks properly */
-  z-index: 2; /* Place above background layers */
 }
 
 /* Responsive Adjustments */
